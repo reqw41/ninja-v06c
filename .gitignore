@@ -1,0 +1,10 @@
+# сборка и материалы оригинала (лента ZX, дискеты CPC, Atari, извлечённые данные) — не в репозитории
+build/
+data/
+orig/*
+!orig/splash/
+tools/.venv/
+__pycache__/
+.DS_Store
+cfg/
+snap/

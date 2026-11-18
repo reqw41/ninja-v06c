@@ -1,0 +1,78 @@
+executed addresses: 3764 (RAM 3563)
+code ranges: 52, bytes 7022
+
+HALT sites:
+
+ROM routines used (target <- callers):
+  $028E <- $E0F4 $E15E $E179 $E281
+  $03B5 <- $E2CA $F908
+
+IN/OUT sites:
+  $DFCB OUT ($FE),A          x341
+  $E201 IN A,($FE)           x175088
+  $E210 IN A,($1F)           x21886
+  $ED9F IN A,($FE)           x21619
+  $EDB8 IN A,($FE)           x21618
+  $F088 OUT ($FE),A          x2220
+
+CALL targets by hit count (top 60):
+  $E007 x 4311866  callers 10
+  $E4ED x 3179954  callers 5
+  $028E x  452821  callers 4
+  $E2B4 x  341472  callers 15
+  $E4DF x  324742  callers 3
+  $EB95 x  252356  callers 2
+  $DF65 x  216585  callers 2
+  $EBAB x  203560  callers 1
+  $DECA x  134743  callers 15
+  $F64C x  121182  callers 1
+  $E741 x   97476  callers 3
+  $E01A x   89991  callers 23
+  $F3C3 x   64974  callers 1
+  $E7D8 x   58877  callers 3
+  $E757 x   47801  callers 3
+  $E74B x   42246  callers 3
+  $DEFB x   31326  callers 4
+  $DF04 x   27541  callers 2
+  $FB71 x   21937  callers 4
+  $FAF3 x   21924  callers 3
+  $E1F4 x   21886  callers 3
+  $E2D5 x   21668  callers 1
+  $E8AB x   21668  callers 3
+  $FE56 x   21660  callers 1
+  $F21B x   21658  callers 1
+  $F277 x   21658  callers 1
+  $F1B4 x   21658  callers 1
+  $EF3F x   21636  callers 1
+  $E4FC x   21634  callers 1
+  $FC78 x   21634  callers 1
+  $F4AC x   21634  callers 1
+  $E583 x   21634  callers 1
+  $EDC2 x   21620  callers 1
+  $EA76 x   21619  callers 1
+  $FE4C x   12860  callers 8
+  $DF85 x    7910  callers 1
+  $F3A7 x    7418  callers 1
+  $E81C x    5887  callers 3
+  $FAD4 x    4792  callers 1
+  $F554 x    4747  callers 1
+  $F0F2 x    4740  callers 1
+  $FC41 x    4554  callers 1
+  $DFAB x    3500  callers 1
+  $FEA2 x    3167  callers 1
+  $E809 x    2218  callers 7
+  $03B5 x    1853  callers 2
+  $F40D x    1626  callers 2
+  $E7E7 x    1583  callers 4
+  $E7FC x    1500  callers 1
+  $EAA7 x    1209  callers 2
+  $F0FD x    1104  callers 5
+  $F476 x     914  callers 3
+  $E81F x     909  callers 2
+  $FA3D x     757  callers 2
+  $E7F0 x     756  callers 1
+  $FA8F x     701  callers 1
+  $DF47 x     650  callers 10
+  $E70D x     507  callers 3
+  $F063 x     432  callers 8
+  $F5F2 x     401  callers 4

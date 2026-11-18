@@ -1,0 +1,28 @@
+NOTICE
+======
+
+Ninja (1986) is a commercial game by Steve Coleman, published by Mastertronic /
+Entertainment USA; the ZX Spectrum, Amstrad CPC (by Brian Beuken), Atari 8-bit
+and Atari ST versions were published by Mastertronic as well. All rights in the
+original game, its audiovisual assets, music, manuals, and packaging remain with
+the respective copyright holders.
+
+This repository contains:
+
+1. Original work of the port authors — Vector-06C platform code under
+   `src/vec/` (except `src/vec/gen/`), tools under `tools/`, documentation under
+   `docs/`, the start-screen picture `orig/splash/ninja_splash.png` and the root
+   README — licensed under the MIT License (see LICENSE).
+
+2. Game logic translated from the original ZX Spectrum binary (`src/ninja.ctl`,
+   `src/model/`, `src/i8080/`), graphics, palettes and font converted from the
+   Amstrad CPC version and music data from the Atari 8-bit version
+   (`src/vec/gen/`), data read at build time from the original tape (not
+   included), and the ready-to-run images under `rom/`. These materials are
+   included solely for non-commercial research, preservation, and reproducible
+   verification of the Vector-06C port. They are not licensed under MIT.
+   Redistribute or use them only in ways consistent with applicable copyright
+   law and the rights of the copyright holders.
+
+This project is not affiliated with Mastertronic, Entertainment USA, or the
+authors of the original game.
