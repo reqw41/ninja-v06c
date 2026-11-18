@@ -432,7 +432,7 @@ vector06js), сравнение — tools/sfxana.py (уровень, центр 
 
 ## 2026-11-19 — публичный репозиторий, v0.5a
 - По образцу Bruce Lee: чистая копия ~/projects/ninja-v06c-public одним коммитом, LICENSE MIT + NOTICE, README по
-  шаблону портов (старый README — docs/ORIG.md), rom/Ninja-v06c.{c00,r0m,mgl}, скриншоты docs/screenshots.
+  шаблону портов (старый README — docs/ORIG.md), rom/Ninja-v06c.{c00,r0m} (.mgl владелец убрал), скриншоты docs/screenshots.
   Без orig/ (кроме заставки владельца orig/splash) и data/ — материалы оригинала. build.sh: без data/ генераторы
   шрифта и песни не трогают готовые src/vec/gen, ninja_t собирается только при font_zx (эталоны), rom/ собирает
   build.sh (mksplash). Рабочий репо без remote; в публичный переносить только файлами (git archive).
