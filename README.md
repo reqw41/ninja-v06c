@@ -53,7 +53,7 @@ Spectrum, разобранная в SkoolKit (`src/ninja.ctl`). Логика п�
 ## Сборка
 
 Нужны Node.js, Python 3 с Pillow и [SkoolKit](https://skoolkit.ca) 10.1 (`tools/.venv`),
-[sjasmplus](https://github.com/z00m128/sjasmplus) (`tools/sjasmplus`) и лента ZX
+[sjasmplus](https://github.com/z00m128/sjasmplus) 1.24 (`tools/sjasmplus` или в `PATH`), компилятор C (упаковщик `tools/zx0` собирается сам) и лента ZX
 `orig/emu-land-zip/Ninja (1987)(Entertainment USA).tap` (в репозиторий не входит; md5
 `17f0119ddba03b41cb4095fbbdbd6342`, тот же файл — `NINJAMAD.TAP` на spectrumcomputing): из неё снимается образ
 памяти игры. Графика CPC, песня Atari и шрифт уже лежат в `src/vec/gen/`; пересоздать их можно только из

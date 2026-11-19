@@ -116,7 +116,7 @@ open(os.path.join(B, 'game.raw'), 'wb').write(game)
 subprocess.run([os.path.join(ROOT, 'tools/zx0/zx0'), '-f', '-c', os.path.join(B, 'game.raw'), os.path.join(B, 'game.zx0')],
                check=True, capture_output=True)
 n = os.path.getsize(os.path.join(B, 'game.zx0'))
-r = subprocess.run([os.path.join(ROOT, 'tools/sjasmplus'), '--nologo', '--i8080', '--sym=' + os.path.join(B, 'splash.sym'),
+r = subprocess.run([os.environ.get('SJASM') or os.path.join(ROOT, 'tools/sjasmplus'), '--nologo', '--i8080', '--sym=' + os.path.join(B, 'splash.sym'),
                     '-I' + B, os.path.join(ROOT, 'src/vec/splash.asm')], cwd=B, capture_output=True, text=True)
 if r.returncode:
     print(r.stdout, r.stderr); raise SystemExit(1)

@@ -1,14 +1,17 @@
 #!/bin/sh
 # Сборка Ninja для Вектора-06Ц (docs/PORT_PLAN.md). Пока — логика на i8080 для сверки (этап 3).
-# Нужны: Python 3, Node.js, tools/sjasmplus, ~/projects/vector06js (ядро i8080 для стенда).
+# Нужны: Python 3, Node.js, sjasmplus 1.24 (tools/sjasmplus или в PATH), cc (для tools/zx0), ~/projects/vector06js (ядро i8080 для стенда).
 #   ./build.sh          — сборка build/l80/logic.bin (логика для сверки), build/vec/ninja.bin (игра), rom/Ninja-v06c.*
 #   ./build.sh check    — и сверки: JS-модель и i8080 с эталонами ZX, экран Вектора с экраном ZX (tools/vecstep.js)
 set -e
 cd "$(dirname "$0")"
+SJASM=$PWD/tools/sjasmplus; [ -x "$SJASM" ] || SJASM=$(command -v sjasmplus) || { echo 'нет sjasmplus'; exit 1; }
+export SJASM
+[ -x tools/zx0/zx0 ] || cc -O2 -o tools/zx0/zx0 tools/zx0/zx0.c tools/zx0/compress.c tools/zx0/optimize.c tools/zx0/memory.c
 mkdir -p build/l80
 [ -f build/zx/ram4000.bin ] || tools/.venv/bin/python tools/build_skool.py
 python3 -I tools/mkl80.py
-asm() { (cd "$1" && ../../tools/sjasmplus --nologo --i8080 --sym="../../$2.sym" $4 "$3") > "$2.log" 2>&1 || { cat "$2.log"; exit 1; }
+asm() { (cd "$1" && "$SJASM" --nologo --i8080 --sym="../../$2.sym" $4 "$3") > "$2.log" 2>&1 || { cat "$2.log"; exit 1; }
         grep -E "^> " "$2.log" || true; ! grep -q "error:" "$2.log" || { grep error "$2.log"; exit 1; }; }
 asm src/i8080 build/l80/logic logic.asm
 mkdir -p build/vec
